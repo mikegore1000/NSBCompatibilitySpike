@@ -17,8 +17,10 @@ namespace Payments.Endpoint.Worker
             var persistence = endpointConfiguration.UsePersistence<NHibernatePersistence>()
                 .ConnectionString(dbConnectionString);
 
-            var conventions = endpointConfiguration.Conventions()
-                .DefiningCommandsAs(t => t.Namespace != null && t.Namespace.EndsWith("Commands"));
+            var conventions = endpointConfiguration.Conventions();
+
+            conventions.DefiningCommandsAs(t => t.Namespace != null && t.Namespace.EndsWith("Commands"));
+            conventions.DefiningEventsAs(t => t.Namespace != null && t.Namespace.EndsWith("Events"));
 
             var routing = transport.Routing();
 

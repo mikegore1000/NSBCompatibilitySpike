@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Bridge", "Payments
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASBClient", "ASBClient\ASBClient.csproj", "{B6DFC75B-2490-4294-995B-E097EAB46548}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Endpoint", "Orders.Endpoint\Orders.Endpoint.csproj", "{8A5DA6CC-CA00-4A7D-AD13-660973BCCCEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B6DFC75B-2490-4294-995B-E097EAB46548}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6DFC75B-2490-4294-995B-E097EAB46548}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6DFC75B-2490-4294-995B-E097EAB46548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5DA6CC-CA00-4A7D-AD13-660973BCCCEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5DA6CC-CA00-4A7D-AD13-660973BCCCEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5DA6CC-CA00-4A7D-AD13-660973BCCCEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5DA6CC-CA00-4A7D-AD13-660973BCCCEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

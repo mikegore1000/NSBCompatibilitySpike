@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\TestCommand.cs" />
+    <Compile Include="Events\IRefundCompleted.cs" />
+    <Compile Include="Events\RefundCompleted.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Commands\RefundPayment.cs" />
   </ItemGroup>

@@ -1,29 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using NServiceBus;
 using Payments.Messages.Commands;
+using Payments.Messages.Events;
 
 namespace Payments.Endpoint.Worker.Handlers
 {
     public class RefundPaymentHandler : IHandleMessages<RefundPayment>
     {
-        public Task Handle(RefundPayment message, IMessageHandlerContext context)
+        public async Task Handle(RefundPayment message, IMessageHandlerContext context)
         {
             Console.WriteLine($"Refunded {message.Amount} on payment {message.PaymentReference}");
-            context.SendLocal(new TestCommand("Hello"));
-            return Task.CompletedTask;
-        }
-    }
 
-    public class TestCommandHandler : IHandleMessages<TestCommand>
-    {
-        public Task Handle(TestCommand message, IMessageHandlerContext context)
-        {
-            Console.WriteLine($"Test message = {message.Message}");
-            return Task.CompletedTask;
+            await context.Publish(new RefundCompleted(message.PaymentReference, message.Amount));
         }
     }
 }
